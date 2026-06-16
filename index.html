@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය - Thampalawela, Dambagalla, Sri Lanka. A government school providing quality education in Uva Province.">
+    <meta name="keywords" content="Thampalawela Kanishta Vidyalaya, තම්පලාවෙල, දඹගල්ල, Sri Lanka School, Uva Province School">
+    <title>මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය | Mo/Thampalawela Kanishta Vidyalaya</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --light-gold: #F4E4BC;
+            --maroon: #800000;
+            --dark-maroon: #5C0000;
+            --brown: #8B4513;
+            --light-brown: #D2B48C;
+            --white: #FFFFFF;
+            --off-white: #F9F7F2;
+            --text-dark: #2C1810;
+            --text-muted: #6B4423;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Sinhala', 'Poppins', sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--light-gold);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--maroon);
+            border-radius: 5px;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: var(--maroon);
+            color: var(--white);
+            border: 2px solid var(--primary-gold);
+            padding: 8px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .lang-toggle:hover {
+            background: var(--primary-gold);
+            color: var(--maroon);
+            transform: scale(1.05);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: linear-gradient(135deg, var(--maroon) 0%, var(--dark-maroon) 100%);
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+        .top-bar a {
+            color: var(--light-gold);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .top-bar a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* Logo & Branding */
+        .school-logo {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--dark-gold) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid var(--maroon);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .school-logo::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 20 L50 80 M30 40 L50 20 L70 40 M30 60 L50 80 L70 60" stroke="%23800000" stroke-width="2" fill="none"/><circle cx="50" cy="50" r="35" stroke="%23800000" stroke-width="2" fill="none"/><path d="M35 75 Q50 85 65 75" stroke="%23800000" stroke-width="2" fill="none"/></svg>') center/contain no-repeat;
+            opacity: 0.3;
+        }
+        .logo-text {
+            font-size: 2rem;
+            color: var(--maroon);
+            font-weight: 700;
+        }
+
+        /* Navbar */
+        .navbar-main {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-gold) 100%);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 0;
+        }
+        .navbar-main .navbar-brand {
+            padding: 10px 0;
+        }
+        .school-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--maroon);
+            line-height: 1.2;
+        }
+        .school-name-en {
+            font-size: 0.9rem;
+            color: var(--brown);
+            font-family: 'Poppins', sans-serif;
+        }
+        .school-location {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .navbar-nav .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 600;
+            padding: 20px 15px !important;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: var(--maroon);
+            transition: all 0.3s;
+            transform: translateX(-50%);
+        }
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 80%;
+        }
+        .navbar-nav .nav-link:hover {
+            color: var(--maroon) !important;
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(128, 0, 0, 0.9) 0%, rgba(139, 69, 19, 0.85) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="%23f4e4bc"/><path d="M0 50 Q25 30 50 50 T100 50" stroke="%23d4af37" stroke-width="0.5" fill="none" opacity="0.3"/></svg>');
+            background-size: cover;
+            background-position: center;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-logo-large {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--dark-gold) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid var(--white);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            margin: 0 auto 30px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--light-gold);
+            font-weight: 500;
+        }
+        .hero-motto {
+            font-size: 1.2rem;
+            color: var(--primary-gold);
+            font-style: italic;
+            margin-top: 20px;
+            padding: 15px 30px;
+            border: 2px solid var(--primary-gold);
+            display: inline-block;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+        .btn-hero {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--dark-gold) 100%);
+            color: var(--maroon);
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            border: none;
+            transition: all 0.3s;
+            margin-top: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .btn-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: var(--white);
+            color: var(--maroon);
+        }
+
+        /* Section Styling */
+        .section-padding {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--maroon);
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--maroon));
+            border-radius: 2px;
+        }
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        /* Cards */
+        .custom-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: none;
+            height: 100%;
+        }
+        .custom-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--light-gold) 0%, var(--primary-gold) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto 20px;
+            font-size: 1.8rem;
+            color: var(--maroon);
+        }
+        .card-body {
+            padding: 25px;
+        }
+        .card-title {
+            color: var(--maroon);
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Notice Board */
+        .notice-board {
+            background: linear-gradient(135deg, #FFF8DC 0%, var(--light-gold) 100%);
+            border-left: 5px solid var(--maroon);
+            padding: 30px;
+            border-radius: 0 15px 15px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .notice-item {
+            padding: 15px;
+            background: var(--white);
+            margin-bottom: 10px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-gold);
+            transition: all 0.3s;
+        }
+        .notice-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .notice-date {
+            background: var(--maroon);
+            color: var(--white);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Principal Message */
+        .principal-section {
+            background: linear-gradient(135deg, var(--white) 0%, #FFF8DC 100%);
+        }
+        .principal-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .quote-box {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+            margin-top: 20px;
+        }
+        .quote-box::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary-gold);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            opacity: 0.5;
+        }
+
+        /* Gallery */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(128, 0, 0, 0.9), transparent);
+            padding: 20px;
+            color: var(--white);
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Stats Counter */
+        .stats-section {
+            background: linear-gradient(135deg, var(--maroon) 0%, var(--brown) 100%);
+            color: var(--white);
+            padding: 60px 0;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+        }
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--light-gold);
+        }
+
+        /* Footer */
+        .footer-main {
+            background: linear-gradient(135deg, #2C1810 0%, var(--dark-maroon) 100%);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+        .footer-title {
+            color: var(--primary-gold);
+            font-weight: 700;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        .footer-links a {
+            color: var(--light-gold);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: all 0.3s;
+        }
+        .footer-links a:hover {
+            color: var(--primary-gold);
+            padding-left: 5px;
+        }
+        .footer-bottom {
+            background: #1a0f0a;
+            padding: 20px 0;
+            text-align: center;
+            color: var(--light-gold);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(212, 175, 55, 0.2);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-gold);
+            margin-right: 10px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        .social-icon:hover {
+            background: var(--primary-gold);
+            color: var(--maroon);
+            transform: translateY(-3px);
+        }
+
+        /* Contact Form */
+        .form-control-custom {
+            border: 2px solid var(--light-gold);
+            border-radius: 10px;
+            padding: 12px 15px;
+            transition: all 0.3s;
+        }
+        .form-control-custom:focus {
+            border-color: var(--maroon);
+            box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.15);
+        }
+        .btn-submit {
+            background: linear-gradient(135deg, var(--maroon) 0%, var(--brown) 100%);
+            color: var(--white);
+            padding: 12px 40px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(128, 0, 0, 0.3);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-gold), var(--maroon));
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--primary-gold);
+            border: 3px solid var(--maroon);
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .school-name { font-size: 1.1rem; }
+            .section-title h2 { font-size: 1.8rem; }
+            .stat-number { font-size: 2rem; }
+            .hero-logo-large { width: 100px; height: 100px; }
+        }
+
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--off-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            transition: opacity 0.5s;
+        }
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .loader-content {
+            text-align: center;
+        }
+        .loader-logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            animation: pulse 1.5s infinite;
+            border: 4px solid var(--maroon);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Search Box */
+        .search-box {
+            position: relative;
+        }
+        .search-input {
+            border: 2px solid var(--light-gold);
+            border-radius: 25px;
+            padding: 8px 20px;
+            width: 200px;
+            transition: all 0.3s;
+        }
+        .search-input:focus {
+            width: 250px;
+            border-color: var(--maroon);
+            outline: none;
+        }
+
+        /* Calendar Widget */
+        .calendar-widget {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .calendar-header {
+            background: linear-gradient(135deg, var(--maroon), var(--brown));
+            color: var(--white);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .calendar-day {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .calendar-day:hover {
+            background: var(--light-gold);
+        }
+        .calendar-day.active {
+            background: var(--maroon);
+            color: var(--white);
+        }
+        .calendar-day.event {
+            background: var(--primary-gold);
+            color: var(--maroon);
+            font-weight: 700;
+        }
+
+        /* Download Center */
+        .download-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: var(--white);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+            border-left: 4px solid var(--primary-gold);
+        }
+        .download-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        .download-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--light-gold);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--maroon);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        /* Accessibility */
+        .accessibility-bar {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .accessibility-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--maroon);
+            color: var(--white);
+            border: 2px solid var(--primary-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+        .accessibility-btn:hover {
+            background: var(--primary-gold);
+            color: var(--maroon);
+            transform: scale(1.1);
+        }
+
+        /* Admin Panel Structure */
+        .admin-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--maroon), var(--brown));
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            color: var(--maroon);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 999;
+            border: none;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: var(--maroon);
+            color: var(--primary-gold);
+        }
+
+        /* Image Placeholder with Logo Watermark */
+        .img-placeholder {
+            background: linear-gradient(135deg, var(--light-gold), var(--off-white));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            border-radius: 15px;
+            color: var(--brown);
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <i class="fas fa-graduation-cap" style="font-size: 2.5rem; color: var(--maroon);"></i>
+            </div>
+            <h3 style="color: var(--maroon); font-weight: 700;">මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය</h3>
+            <p style="color: var(--brown);">Loading... | පූරණය වෙමින්...</p>
+        </div>
+    </div>
+
+    <!-- Language Toggle -->
+    <button class="lang-toggle" onclick="toggleLanguage()" id="langToggle">
+        <i class="fas fa-globe"></i> <span id="langText">English</span>
+    </button>
+
+    <!-- Accessibility Bar -->
+    <div class="accessibility-bar">
+        <button class="accessibility-btn" onclick="changeFontSize(1)" title="Increase Font Size">
+            <i class="fas fa-font"></i>+
+        </button>
+        <button class="accessibility-btn" onclick="changeFontSize(-1)" title="Decrease Font Size">
+            <i class="fas fa-font"></i>-
+        </button>
+        <button class="accessibility-btn" onclick="toggleHighContrast()" title="High Contrast">
+            <i class="fas fa-adjust"></i>
+        </button>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <i class="fas fa-phone-alt me-2"></i> <span data-si="055-1234567" data-en="055-1234567">055-1234567</span>
+                    <span class="mx-3">|</span>
+                    <i class="fas fa-envelope me-2"></i> <span data-si="thampalawelakv@edu.lk" data-en="thampalawelakv@edu.lk">thampalawelakv@edu.lk</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+                    <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-whatsapp"></i></a>
+                    <span class="ms-3"><i class="fas fa-map-marker-alt me-1"></i> <span data-si="තම්පලාවෙල, දඹගල්ල" data-en="Thampalawela, Dambagalla">තම්පලාවෙල, දඹගල්ල</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-main sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="school-logo me-3">
+                    <i class="fas fa-graduation-cap logo-text"></i>
+                </div>
+                <div>
+                    <div class="school-name" data-si="මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය" data-en="Mo/Thampalawela Kanishta Vidyalaya">මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය</div>
+                    <div class="school-name-en" data-si="Mo/Thampalawela Kanishta Vidyalaya" data-en="Mo/Thampalawela Kanishta Vidyalaya">Mo/Thampalawela Kanishta Vidyalaya</div>
+                    <div class="school-location" data-si="තම්පලාවෙල, දඹගල්ල, ශ්‍රී ලංකාව" data-en="Thampalawela, Dambagalla, Sri Lanka">තම්පලාවෙල, දඹගල්ල, ශ්‍රී ලංකාව</div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(0.5) sepia(1) hue-rotate(-50deg) saturate(5);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home" data-si="මුල් පිටුව" data-en="Home">මුල් පිටුව</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-si="අප ගැන" data-en="About Us">අප ගැන</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#administration" data-si="පරිපාලනය" data-en="Administration">පරිපාලනය</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#academic" data-si="අධ්‍යයන" data-en="Academic">අධ්‍යයන</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news" data-si="පුවත්" data-en="News">පුවත්</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery" data-si="ගැලරිය" data-en="Gallery">ගැලරිය</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#admissions" data-si="ඇතුළත් වීම" data-en="Admissions">ඇතුළත් වීම</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-si="සම්බන්ධතා" data-en="Contact">සම්බන්ධතා</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <div class="search-box">
+                            <input type="text" class="search-input" placeholder="සොයන්න..." data-si-placeholder="සොයන්න..." data-en-placeholder="Search..." onkeyup="searchSite(this.value)">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container text-center hero-content">
+            <div class="hero-logo-large">
+                <i class="fas fa-graduation-cap" style="font-size: 4rem; color: var(--maroon);"></i>
+            </div>
+            <h1 class="hero-title" data-si="මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය" data-en="Mo/Thampalawela Kanishta Vidyalaya">මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය</h1>
+            <p class="hero-subtitle" data-si="අධ්‍යාපනයෙන් ජීවිතය ආලෝකමත් කරමු" data-en="Enlightening Lives Through Education">අධ්‍යාපනයෙන් ජීවිතය ආලෝකමත් කරමු</p>
+            <div class="hero-motto" data-si="අධ්‍යාපනයෙන් ආලෝකය - විනයෙන් ජයග්‍රහණය" data-en="Light Through Education - Victory Through Discipline">
+                අධ්‍යාපනයෙන් ආලෝකය - විනයෙන් ජයග්‍රහණය
+            </div>
+            <br>
+            <a href="#about" class="btn btn-hero" data-si="වැඩි විස්තර" data-en="Learn More">වැඩි විස්තර</a>
+            <a href="#contact" class="btn btn-hero ms-3" data-si="සම්බන්ධ වන්න" data-en="Contact Us">සම්බන්ධ වන්න</a>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3 stat-item mb-4 mb-md-0">
+                    <div class="stat-number" data-count="850">0</div>
+                    <div class="stat-label" data-si="සිසුන්" data-en="Students">සිසුන්</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item mb-4 mb-md-0">
+                    <div class="stat-number" data-count="45">0</div>
+                    <div class="stat-label" data-si="ගුරුවරුන්" data-en="Teachers">ගුරුවරුන්</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                    <div class="stat-number" data-count="35">0</div>
+                    <div class="stat-label" data-si="වසර ගණන" data-en="Years">වසර ගණන</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                    <div class="stat-number" data-count="25">0</div>
+                    <div class="stat-label" data-si="පන්ති" data-en="Classes">පන්ති</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcements & Notice Board -->
+    <section class="section-padding" style="background: var(--white);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <div class="section-title text-start">
+                        <h2 data-si="නවතම නිවේදන" data-en="Latest Announcements">නවතම නිවේදන</h2>
+                    </div>
+                    <div class="notice-board">
+                        <div class="notice-item">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="notice-date">2026 ජූනි 15</span>
+                                <span class="badge bg-warning text-dark">නව</span>
+                            </div>
+                            <h5 data-si="2026 වාර විභාග කාලසටහන ප්‍රකාශයට පත් කර ඇත" data-en="2026 Term Exam Schedule Released">2026 වාර විභාග කාලසටහන ප්‍රකාශයට පත් කර ඇත</h5>
+                            <p class="mb-0 text-muted" data-si="දෙවන වාර විභාගය ජූලි මස 20 වන දා සිට ආරම්භ වේ." data-en="Second term exams commence from July 20th.">දෙවන වාර විභාගය ජූලි මස 20 වන දා සිට ආරම්භ වේ.</p>
+                        </div>
+                        <div class="notice-item">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="notice-date">2026 ජූනි 10</span>
+                            </div>
+                            <h5 data-si="වාර්ෂික ක්‍රීඩා උළෙල - 2026" data-en="Annual Sports Meet - 2026">වාර්ෂික ක්‍රීඩා උළෙල - 2026</h5>
+                            <p class="mb-0 text-muted" data-si="අගෝස්තු මස 15 වන දා පාසල් ක්‍රීඩාංගණයේදී පැවැත්වේ." data-en="To be held on August 15th at the school grounds.">අගෝස්තු මස 15 වන දා පාසල් ක්‍රීඩාංගණයේදී පැවැත්වේ.</p>
+                        </div>
+                        <div class="notice-item">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="notice-date">2026 ජූනි 05</span>
+                            </div>
+                            <h5 data-si="නව ඇතුළත් වීම් සඳහා අයදුම්පත් කැඳවීම" data-en="Calling Applications for New Admissions">නව ඇතුළත් වීම් සඳහා අයදුම්පත් කැඳවීම</h5>
+                            <p class="mb-0 text-muted" data-si="2027 අධ්‍යයන වසර සඳහා 1 ශ්‍රේණියට අයදුම්පත් බාරගැනීම ආරම්භ වේ." data-en="Accepting applications for Grade 1 - 2027 academic year.">2027 අධ්‍යයන වසර සඳහා 1 ශ්‍රේණියට අයදුම්පත් බාරගැනීම ආරම්භ වේ.</p>
+                        </div>
+                        <div class="notice-item">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="notice-date">2026 මැයි 28</span>
+                            </div>
+                            <h5 data-si="පාසල් වර්ණ උළෙල සාර්ථකව පැවැත්වේ" data-en="School Colour Award Ceremony Successfully Held">පාසල් වර්ණ උළෙල සාර්ථකව පැවැත්වේ</h5>
+                            <p class="mb-0 text-muted" data-si="අපගේ සිසුන් 15 දෙනෙකුට ජාතික වර්ණ ප්‍රදානය කරන ලදී." data-en="15 of our students received national colours.">අපගේ සිසුන් 15 දෙනෙකුට ජාතික වර්ණ ප්‍රදානය කරන ලදී.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="section-title text-start">
+                        <h2 data-si="දින දර්ශනය" data-en="School Calendar">දින දර්ශනය</h2>
+                    </div>
+                    <div class="calendar-widget">
+                        <div class="calendar-header">
+                            <h4 class="mb-0">ජූනි 2026</h4>
+                        </div>
+                        <div class="text-center">
+                            <div class="calendar-day">ඉ</div>
+                            <div class="calendar-day">ස</div>
+                            <div class="calendar-day">අ</div>
+                            <div class="calendar-day">බ</div>
+                            <div class="calendar-day">බ්‍ර</div>
+                            <div class="calendar-day">සි</div>
+                            <div class="calendar-day">සෙ</div>
+                            <br>
+                            <div class="calendar-day">1</div>
+                            <div class="calendar-day">2</div>
+                            <div class="calendar-day">3</div>
+                            <div class="calendar-day">4</div>
+                            <div class="calendar-day">5</div>
+                            <div class="calendar-day event">6</div>
+                            <div class="calendar-day">7</div>
+                            <br>
+                            <div class="calendar-day">8</div>
+                            <div class="calendar-day">9</div>
+                            <div class="calendar-day">10</div>
+                            <div class="calendar-day">11</div>
+                            <div class="calendar-day">12</div>
+                            <div class="calendar-day">13</div>
+                            <div class="calendar-day">14</div>
+                            <br>
+                            <div class="calendar-day active">15</div>
+                            <div class="calendar-day">16</div>
+                            <div class="calendar-day">17</div>
+                            <div class="calendar-day">18</div>
+                            <div class="calendar-day">19</div>
+                            <div class="calendar-day">20</div>
+                            <div class="calendar-day">21</div>
+                            <br>
+                            <div class="calendar-day">22</div>
+                            <div class="calendar-day">23</div>
+                            <div class="calendar-day">24</div>
+                            <div class="calendar-day">25</div>
+                            <div class="calendar-day">26</div>
+                            <div class="calendar-day">27</div>
+                            <div class="calendar-day">28</div>
+                            <br>
+                            <div class="calendar-day">29</div>
+                            <div class="calendar-day">30</div>
+                        </div>
+                        <div class="mt-3">
+                            <small class="text-muted"><span class="badge bg-warning text-dark me-2">●</span> <span data-si="විශේෂ සිදුවීම්" data-en="Special Events">විශේෂ සිදුවීම්</span></small><br>
+                            <small class="text-muted"><span class="badge bg-danger me-2">●</span> <span data-si="අද" data-en="Today">අද</span></small>
+                        </div>
+                    </div>
+                    
+                    <!-- Download Center Preview -->
+                    <div class="mt-4">
+                        <div class="section-title text-start">
+                            <h4 data-si="බාගත කිරීම්" data-en="Downloads">බාගත කිරීම්</h4>
+                        </div>
+                        <div class="download-item">
+                            <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
+                            <div>
+                                <h6 class="mb-1" data-si="වාර විභාග කාලසටහන" data-en="Term Exam Schedule">වාර විභාග කාලසටහන</h6>
+                                <small class="text-muted">PDF | 245 KB</small>
+                            </div>
+                        </div>
+                        <div class="download-item">
+                            <div class="download-icon"><i class="fas fa-file-word"></i></div>
+                            <div>
+                                <h6 class="mb-1" data-si="අයදුම්පත් ආකෘතිය" data-en="Application Form">අයදුම්පත් ආකෘතිය</h6>
+                                <small class="text-muted">DOC | 120 KB</small>
+                            </div>
+                        </div>
+                        <div class="download-item">
+                            <div class="download-icon"><i class="fas fa-file-alt"></i></div>
+                            <div>
+                                <h6 class="mb-1" data-si="පාසල් නීති රීති" data-en="School Rules & Regulations">පාසල් නීති රීති</h6>
+                                <small class="text-muted">PDF | 180 KB</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principal's Message -->
+    <section class="section-padding principal-section" id="principal-message">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-si="ප්‍රධානාචාර්ය තුමාගේ පණිවිඩය" data-en="Principal's Message">ප්‍රධානාචාර්ය තුමාගේ පණිවිඩය</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <div class="img-placeholder" style="width: 250px; height: 250px; border-radius: 50%; margin: 0 auto; border: 5px solid var(--primary-gold);">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4 class="mt-3" style="color: var(--maroon); font-weight: 700;">ප්‍රධානාචාර්ය තුමා</h4>
+                    <p class="text-muted" data-si="මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය" data-en="Mo/Thampalawela Kanishta Vidyalaya">මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය</p>
+                    <span class="admin-badge">ප්‍රධානාචාර්ය</span>
+                </div>
+                <div class="col-lg-8">
+                    <div class="quote-box">
+                        <p class="lead" style="color: var(--text-dark); line-height: 1.8;" data-si="ආදරණීය ශිෂ්‍ය ශිෂ්‍යාවන්, දෙමාපියන් සහ පාසල් ප්‍රජාව වෙත මගේ සාදර පිළිගැනීම!" data-en="My warmest welcome to our beloved students, parents, and the school community!">
+                            ආදරණීය ශිෂ්‍ය ශිෂ්‍යාවන්, දෙමාපියන් සහ පාසල් ප්‍රජාව වෙත මගේ සාදර පිළිගැනීම!
+                        </p>
+                        <p style="line-height: 1.8;" data-si="මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය උව පළාතේ දඹගල්ල ප්‍රදේශයේ පිහිටි ගෞරවනීය රාජ්‍ය පාසලකි. අපගේ පාසල අධ්‍යාපනික විශිෂ්ටත්වය, ක්‍රීඩා සහ සංස්කෘතික කටයුතු වලින් ප්‍රසිද්ධයි. අපගේ ඉලක්කය සිසුන්ගේ සම්පූර්ණ අධ්‍යාත්මික සංවර්ධනය සිදු කිරීමයි." data-en="Mo/Thampalawela Kanishta Vidyalaya is a prestigious government school located in the Dambagalla area of Uva Province. Our school is renowned for educational excellence, sports, and cultural activities. Our aim is to ensure the holistic development of students.">
+                            මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය උව පළාතේ දඹගල්ල ප්‍රදේශයේ පිහිටි ගෞරවනීය රාජ්‍ය පාසලකි. අපගේ පාසල අධ්‍යාපනික විශිෂ්ටත්වය, ක්‍රීඩා සහ සංස්කෘතික කටයුතු වලින් ප්‍රසිද්ධයි. අපගේ ඉලක්කය සිසුන්ගේ සම්පූර්ණ අධ්‍යාත්මික සංවර්ධනය සිදු කිරීමයි.
+                        </p>
+                        <p style="line-height: 1.8;" data-si="අපගේ දක්ෂ ගුරු මණ්ඩලය සහ කැපවූ දෙමාපියන් සමඟින්, අපි අනාගත පරපුරට ගුණාත්මක අධ්‍යාපනය ලබා දෙමින් රටට සේවය කරමු. අපගේ පාසලේ ඉතිහාසය ගෞරවයෙන් සිහිපත් කරමින් අනාගතය දෙස බලමු." data-en="Together with our dedicated teaching staff and committed parents, we serve the nation by providing quality education to the future generation. While honoring our school's history, we look towards the future.">
+                            අපගේ දක්ෂ ගුරු මණ්ඩලය සහ කැපවූ දෙමාපියන් සමඟින්, අපි අනාගත පරපුරට ගුණාත්මක අධ්‍යාපනය ලබා දෙමින් රටට සේවය කරමු. අපගේ පාසලේ ඉතිහාසය ගෞරවයෙන් සිහිපත් කරමින් අනාගතය දෙස බලමු.
+                        </p>
+                        <div class="text-end mt-3">
+                            <strong style="color: var(--maroon);">- ප්‍රධානාචාර්ය තුමා</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="section-padding" id="about" style="background: var(--white);">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-si="අප ගැන" data-en="About Us">අප ගැන</h2>
+                <p data-si="අපගේ පාසලේ ඉතිහාසය, දැක්ම, මෙහෙවර සහ වටිනාකම්" data-en="Our history, vision, mission, and values">අපගේ පාසලේ ඉතිහාසය, දැක්ම, මෙහෙවර සහ වටිනාකම්</p>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="custom-card h-100">
+                        <div class="card-icon"><i class="fas fa-history"></i></div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title" data-si="පාසලේ ඉතිහාසය" data-en="School History">පාසලේ ඉතිහාසය</h3>
+                            <p style="line-height: 1.8;" data-si="මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය 1991 වසරේ උව පළාතේ දඹගල්ල ප්‍රදේශයේ තම්පලාවෙල ග්‍රාමයේ පිහිටුවන ලදී. ආරම්භයේදී සිසුන් 50 දෙනෙකු සහ ගුරුවරුන් 5 දෙනෙකු සමඟින් ආරම්භ වූ මෙම පාසල, වර්තමානයේදී සිසුන් 850 කට අධික සංඛ්‍යාවකට අධ්‍යාපනය ලබා දෙයි." data-en="Mo/Thampalawela Kanishta Vidyalaya was established in 1991 in Thampalawela village, Dambagalla, Uva Province. Starting with 50 students and 5 teachers, the school now educates over 850 students.">
+                                මො/තම්පලාවෙල කනිෂ්ඨ විද්‍යාලය 1991 වසරේ උව පළාතේ දඹගල්ල ප්‍රදේශයේ තම්පලාවෙල ග්‍රාමයේ පිහිටුවන ලදී. ආරම්භයේදී සිසුන් 50 දෙනෙකු සහ ගුරුවරුන් 5 දෙනෙකු සමඟින් ආරම්භ වූ මෙම පාසල, වර්තමානයේදී සිසුන් 850 කට අධික සංඛ්‍යාවකට අධ්‍යාපනය ලබා දෙයි.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="custom-card h-100">
+                        <div class="card-icon"><i class="fas fa-eye"></i></div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title" data-si="දැක්ම" data-en="Vision">දැක්ම</h3>
+                            <p style="line-height: 1.8;" data-si="ගුණාත්මක අධ්‍යාපනයෙන් සිසුන්ගේ සම්පූර්ණ පෞරුෂ සංවර්ධනය සිදු කරමින් රටට දක්ෂ, විනයගරුක, දායාදී පුරවැසියන් බිහි කිරීම." data-en="To produce skilled, disciplined, and patriotic citizens for the nation through quality education and holistic student development.">
+                                ගුණාත්මක අධ්‍යාපනයෙන් සිසුන්ගේ සම්පූර්ණ පෞරුෂ සංවර්ධනය සිදු කරමින් රටට දක්ෂ, විනයගරුක, දායාදී පුරවැසියන් බිහි කිරීම.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="custom-card h-100">
+                        <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title" data-si="මෙහෙවර" data-en="Mission">මෙහෙවර</h3>
+                            <p style="line-height: 1.8;" data-si="නවීන තාක්ෂණික සම්පත් යොදා ගනිමින්, ගුණාත්මක අධ්‍යාපනය ලබා දීම. සිසුන්ගේ බුද්ධිමය, ආධ්‍යාත්මික, සමාජීය, භෞතික සහ ආධ්‍යාත්මික සංවර්ධනය සිදු කිරීම." data-en="Providing quality education using modern technological resources and ensuring intellectual, emotional, social, physical, and spiritual development of students.">
+                                නවීන තාක්ෂණික සම්පත් යොදා ගනිමින්, ගුණාත්මක අධ්‍යාපනය ලබා දීම. සිසුන්ගේ බුද්ධිමය, ආධ්‍යාත්මික, සමාජීය, භෞතික සහ ආධ්‍යාත්මික සංවර්ධනය සිදු කිරීම.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="custom-card h-100">
+                        <div class="card-icon"><i class="fas fa-gem"></i></div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title" data-si="වටිනාකම්" data-en="Values">වටිනාකම්</h3>
+                            <ul class="list-unstyled text-start mt-3">
+                                <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> <span data-si="අධ්‍යාපනික විශිෂ්ටත්වය" data-en="Educational Excellence">අධ්‍යාපනික විශිෂ්ටත්වය</span></li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> <span data-si="විනය සහ සදාචාරය" data-en="Discipline and Morality">විනය සහ සදාචාරය</span></li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> <span data-si="ජාතික හා ආගමික සහජීවනය" data-en="National and Religious Harmony">ජාතික හා ආගමික සහජීවනය</span></li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> <span data-si="ක්‍රීඩා සහ සංස්කෘතික කටයුතු" data-en="Sports and Cultural Activities">ක්‍රීඩා සහ සංස්කෘතික කටයුතු</span></li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> <span data-si="පරිසර සංරක්ෂණය" data-en="Environmental Conservation">පරිසර සංරක්ෂණය</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Development Journey Timeline -->
+            <div class="mt-5">
+                <h3 class="text-center mb-5" style="color: var(--maroon); font-weight: 700;" data-si="පාසලේ සංවර්ධන ගමන" data-en="School Development Journey">පාසලේ සංවර්ධන ගමන</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h5 style="color: var(--maroon); font-weight: 700;">1991</h5>
+                        <p data-si="පාසල පිහිටුවන ලදී. සිසුන් 50 ක් සහ ගුරුවරුන් 5 දෙනෙකු සමඟින් ආරම්භ විය." data-en="School established with 50 students and 5 teachers.">පාසල පිහිටුවන ලදී. සිසුන් 50 ක් සහ ගුරුවරුන් 5 දෙනෙකු සමඟින් ආරම්භ විය.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 style="color: var(--maroon); font-weight: 700;">2000</h5>
+                        <p data-si="පළමු ගොඩනැගිල්ල සම්පූර්ණ කරන ලදී. සිසු සංඛ්‍යාව 200 දක්වා වැඩි විය." data-en="First building completed. Student population increased to 200.">පළමු ගොඩනැගිල්ල සම්පූර්ණ කරන ලදී. සිසු සංඛ්‍යාව 200 දක්වා වැඩි විය.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 style="color: var(--maroon); font-weight: 700;">2010</h5>
+                        <p data-si="පරිගණක කාමරය ආරම්භ කරන ලදී. විදුලි සම්පත් සම්පූර්ණයෙන්ම ලබා දෙන ලදී." data-en="Computer lab inaugurated. Full electricity supply provided.">පරිගණක කාමරය ආරම්භ කරන ලදී. විදුලි සම්පත් සම්පූර්ණයෙන්ම ලබා දෙන ලදී.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 style="color: var(--maroon); font-weight: 700;">2015</h5>
+                        <p data-si="ක්‍රීඩාංගණය සංවර්ධනය කරන ලදී. පාසල් බස් රථ සේවාව ආරම්භ විය." data-en="Playground developed. School bus service commenced.">ක්‍රීඩාංගණය සංවර්ධනය කරන ලදී. පාසල් බස් රථ සේවාව ආරම්භ විය.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 style="color: var(--maroon); font-weight: 700;">2020</h5>
+                        <p data-si="අන්තර්ජාල සම්බන්ධතාව සම්පූර්ණයෙන්ම ලබා දෙන ලදී. නවීන විද්‍යාගාරය ආරම්භ කරන ලදී." data-en="Full internet connectivity provided. Modern science lab inaugurated.">අන්තර්ජාල සම්බන්ධතාව සම්පූර්ණයෙන්ම ලබා දෙන ලදී. නවීන විද්‍යාගාරය ආරම්භ කරන ලදී.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 style="color: var(--maroon); font-weight: 700;">2026</h5>
+                        <p data-si="වෙබ් අඩවිය නවීකරණය කරන ලදී. ඩිජිටල් අධ්‍යාපන ක්‍රමවේදයන් හඳුන්වා දෙන ලදී." data-en="Website modernized. Digital education methodologies introduced.">වෙබ් අඩවිය නවීකරණය කරන ලදී. ඩිජිටල් අධ්‍යාපන ක්‍රමවේදයන් හඳුන්වා දෙන ලදී.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Administration -->
+    <section class="section-padding" id="administration" style="background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gold) 100%);">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-si="පරිපාලනය" data-en="Administration">පරිපාලනය</h2>
+                <p data-si="අපගේ කැපවූ පරිපාලන කණ්ඩායම" data-en="Our Dedicated Administration Team">අපගේ කැපවූ පරිපාලන කණ්ඩායම</p>
+            </div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="custom-card text-center">
+                        <div class="img-placeholder mx-auto mt-4" style="width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--primary-gold);">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="admin-badge mb-3 d-inline-block">ප්‍රධානාචාර්ය</span>
+                            <h4 class="card-title" data-si="ප්‍රධානාචාර්ය තුමා" data-en="Principal">ප්‍රධානාචාර්ය තුමා</h4>
+                            <p class="text-muted" data-si="පාසලේ ප්‍රධාන පරිපාලක" data-en="Chief Administrator of the School">පාසලේ ප්‍රධාන පරිපාලක</p>
+                            <p data-si="අධ්‍යාපනයෙන් ආලෝකය - විනයෙන් ජයග්‍රහණය" data-en="Light Through Education - Victory Through Discipline">අධ්‍යාපනයෙන් ආලෝකය - විනයෙන් ජයග්‍රහණය</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="custom-card text-center">
+                        <div class="img-placeholder mx-auto mt-4" style="width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--primary-gold);">
+                            <i class
